@@ -1,0 +1,22 @@
+.account-first-alphabate {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background: #aeb6bf;
+  color: #333;
+  display: inline-block;
+  line-height: 45px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.profile-icons-round {
+  border-radius: 100%;
+  left: 25px;
+  line-height: 18px !important;
+  margin-right: 0 !important;
+  position: absolute;
+  text-align: center;
+  top: -4px;
+  width: 19px !important;
+}
