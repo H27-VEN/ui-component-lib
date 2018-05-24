@@ -27,14 +27,55 @@ class App extends Component {
       <SPLink link_href={"https://www.instagram.com"} link_content={"dummy2"} />
     ];
 
+    const User = [
+      <React.Fragment>
+        <span className="userinfo">
+          <SPUserIcon user_name={"dummy1"} profile_type={"facebook"} />
+        </span>
+        <span className="userinfo">
+          <SPLink
+            link_href={"https://www.facebook.com"}
+            link_content={"dummy1"}
+          />
+        </span>
+      </React.Fragment>,
+
+      <React.Fragment>
+        <span className="userinfo">
+          <SPUserIcon user_name={"dummy2"} profile_type={"instagram"} />
+        </span>
+        <span className="userinfo">
+          <SPLink
+            link_href={"https://www.instagram.com"}
+            link_content={"dummy2"}
+          />
+        </span>
+      </React.Fragment>,
+
+      <React.Fragment>
+        <span className="userinfo">
+          <SPUserIcon
+            user_name="imawebdev"
+            profile_type="linkedin"
+            user_img_src={pro_pic}
+          />,
+        </span>
+        <span className="userinfo">
+          <SPLink
+            link_href={"https://www.linkedin.com"}
+            link_content={"imawebdev"}
+          />
+        </span>
+      </React.Fragment>
+    ];
+
     return (
       <div className="App">
-        <SPLink link_href={"https://www.google.com"} link_content={"google"} />
         <SPTable
           title="Demo Table"
           colsName={["Account Name", "Queued", "Errors"]}
           data={[["imawebdev", 5, 0], ["dummy1", 4, 3], ["dummy2", 4, 0]]}
-          dataComponent={[{ user_icon: UserIcon, user_name: UserName }]}
+          dataComponent={[User]}
         />
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import linkedin from "./profile-icons/icons-linkedin.png";
 import facebook from "./profile-icons/icons-facebook.png";
 import instagram from "./profile-icons/icons-instagram.png";
@@ -54,3 +55,25 @@ export default class SPUserIcon extends Component {
     );
   }
 }
+
+SPUserIcon.PropTypes = {
+  user_name: PropTypes.string.isRequired,
+  user_img_src: PropTypes.string,
+  profile_type: PropTypes.oneOf(
+    "facebook",
+    "linkedin",
+    "instagram",
+    "twitter",
+    "google_plus",
+    "pinterest",
+    "tumblr",
+    "Vk",
+    "Xing"
+  ).isRequired
+};
+
+SPUserIcon.defaultProps = {
+  user_name: "",
+  user_img_src: "",
+  profile_type: "facebook"
+};
