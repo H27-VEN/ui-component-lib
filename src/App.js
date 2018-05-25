@@ -8,24 +8,11 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    const UserIcon = [
-      <SPUserIcon
-        user_name="imawebdev"
-        profile_type="linkedin"
-        user_img_src={pro_pic}
-      />,
-      <SPUserIcon user_name="dummy1" profile_type="facebook" />,
-      <SPUserIcon user_name="dummy2" profile_type="instagram" />
-    ];
-
-    const UserName = [
-      <SPLink
-        link_href={"https://www.linkedin.com"}
-        link_content={"imawebdev"}
-      />,
-      <SPLink link_href={"https://www.facebook.com"} link_content={"dummy1"} />,
-      <SPLink link_href={"https://www.instagram.com"} link_content={"dummy2"} />
-    ];
+    /* Passing array of resuable components to a table
+    * SPUserIcon shows user avatar (if they provided their profile_pic or round first letter avatar otherwise) alongside their profile type icon.
+    * SPLink is a component for creating hyperlink
+    * Go In the components respective folder for detailed info
+    */
 
     const User = [
       <React.Fragment>
@@ -68,6 +55,8 @@ class App extends Component {
         </span>
       </React.Fragment>
     ];
+
+    /* Passing array of resuable components */
 
     return (
       <div className="App">

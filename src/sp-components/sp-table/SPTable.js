@@ -1,3 +1,13 @@
+/* SPTable is a component made using react-bootstrap's Table Component 
+*  SPTable needs 3 Props to create a table
+*/
+
+/* props used for SPTable component
+* colsName: is a prop wherein you pass array of colName to the table
+* data: is a prop is an array which holds array represting each row in the table 
+* dataComponent: is a Array which holds Component to be rendered for a specific column for each row
+*/
+
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import PropTypes from "prop-types";
