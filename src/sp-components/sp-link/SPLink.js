@@ -5,24 +5,6 @@ import PropTypes from "prop-types";
 import ExtraPropTypes from "react-extra-prop-types";
 import styled from "styled-components";
 
-SPLink.PropTypes = {
-  link_href: PropTypes.string.isRequired,
-  link_content: PropTypes.string.isRequired,
-  link_color: ExtraPropTypes.color,
-  link_hover_color: ExtraPropTypes.color,
-  link_active_color: ExtraPropTypes.color,
-  link_visited_color: ExtraPropTypes.color
-};
-
-SPLink.defaultProps = {
-  link_href: "https://www.socialpilot.co/",
-  link_content: "SocialPilot",
-  link_color: "#0000FF",
-  link_hover_color: "#800080",
-  link_active_color: "#551A8B",
-  link_visited_color: "#800080"
-};
-
 const Link = styled.a`
   display: inline-block;
   font-size: 1em;
@@ -60,5 +42,23 @@ class SPLink extends Component {
     );
   }
 }
+
+SPLink.PropTypes = {
+  link_href: PropTypes.string.isRequired,
+  link_content: PropTypes.string.isRequired,
+  link_color: ExtraPropTypes.color,
+  link_hover_color: ExtraPropTypes.color,
+  link_active_color: ExtraPropTypes.color,
+  link_visited_color: ExtraPropTypes.color
+};
+
+SPLink.defaultProps = {
+  link_href: "https://www.socialpilot.co/",
+  link_content: "SocialPilot",
+  link_color: "#0000FF",
+  link_hover_color: "#800080",
+  link_active_color: "#551A8B",
+  link_visited_color: "#800080"
+};
 
 export default SPLink;

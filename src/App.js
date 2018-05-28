@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import SPTable from "./sp-components/sp-table/SPTable";
 import SPUserIcon from "./sp-components/sp-user-icon/SPUserIcon";
 import SPLink from "./sp-components/sp-link/SPLink";
-
 import pro_pic from "./pro_pic.jpeg";
 import "./App.css";
 
 class App extends Component {
   render() {
-    /* Passing array of resuable components to a table
+    /* Here I am assembling the components that I made in sp-components 
+    * Passing array of resuable components to a table
     * SPUserIcon shows user avatar (if they provided their profile_pic or round first letter avatar otherwise) alongside their profile type icon.
     * SPLink is a component for creating hyperlink
     * Go In the components respective folder for detailed info
     */
-
     const User = [
       <React.Fragment>
         <span className="userinfo">

@@ -8,27 +8,6 @@ import instagram from "./profile-icons/icons-instagram.png";
 import "./SPUserIcon.css";
 
 /* proptypes to create component */
-SPUserIcon.PropTypes = {
-  user_name: PropTypes.string.isRequired,
-  user_img_src: PropTypes.string,
-  profile_type: PropTypes.oneOf(
-    "facebook",
-    "linkedin",
-    "instagram",
-    "twitter",
-    "google_plus",
-    "pinterest",
-    "tumblr",
-    "Vk",
-    "Xing"
-  ).isRequired
-};
-
-SPUserIcon.defaultProps = {
-  user_name: "",
-  user_img_src: "",
-  profile_type: "facebook"
-};
 
 export default class SPUserIcon extends Component {
   getUserAvatar() {
@@ -80,3 +59,25 @@ export default class SPUserIcon extends Component {
     );
   }
 }
+
+SPUserIcon.PropTypes = {
+  user_name: PropTypes.string.isRequired,
+  user_img_src: PropTypes.string,
+  profile_type: PropTypes.oneOf(
+    "facebook",
+    "linkedin",
+    "instagram",
+    "twitter",
+    "google_plus",
+    "pinterest",
+    "tumblr",
+    "Vk",
+    "Xing"
+  ).isRequired
+};
+
+SPUserIcon.defaultProps = {
+  user_name: "SocialPilot",
+  user_img_src: undefined,
+  profile_type: "facebook"
+};
