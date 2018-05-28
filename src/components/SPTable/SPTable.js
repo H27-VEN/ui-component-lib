@@ -11,7 +11,9 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
 import PropTypes from "prop-types";
+import "bootstrap-css-only";
 
+/** A Table Component */
 class SPTable extends Component {
   createColumns() {
     let cols = [];
@@ -59,10 +61,14 @@ class SPTable extends Component {
   }
 }
 
-SPTable.PropTypes = {
+SPTable.propTypes = {
+  /** Title of the table */
   title: PropTypes.string,
+  /** Name of the columns  */
   colsName: PropTypes.arrayOf(PropTypes.string).isRequired,
+  /** Data for the component */
   data: PropTypes.arrayOf(PropTypes.array),
+  /** Components to be use for a specific column for each row  */
   dataComponent: PropTypes.arrayOf(PropTypes.object)
 };
 

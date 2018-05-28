@@ -1,9 +1,8 @@
-/* SPLink is a hyperlink component which is used for creating links */
-
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ExtraPropTypes from "react-extra-prop-types";
 import styled from "styled-components";
+import "bootstrap-css-only";
 
 const Link = styled.a`
   display: inline-block;
@@ -27,6 +26,7 @@ const Link = styled.a`
   }
 `;
 
+/** A component to create Hyperlink */
 class SPLink extends Component {
   render() {
     return (
@@ -43,12 +43,18 @@ class SPLink extends Component {
   }
 }
 
-SPLink.PropTypes = {
+SPLink.propTypes = {
+  /** pass the complete url you want to navigate to */
   link_href: PropTypes.string.isRequired,
+  /** content you want to pass for link(only text string for now) */
   link_content: PropTypes.string.isRequired,
+  /** color for unvisited link. CSS color string (rgb(a), hsl(a), hex). Excludes keywords. */
   link_color: ExtraPropTypes.color,
+  /** color for hovering link. CSS color string (rgb(a), hsl(a), hex). Excludes keywords.  */
   link_hover_color: ExtraPropTypes.color,
+  /** color for active link. CSS color string (rgb(a), hsl(a), hex). Excludes keywords.  */
   link_active_color: ExtraPropTypes.color,
+  /** color for visited link. CSS color string (rgb(a), hsl(a), hex). Excludes keywords.  */
   link_visited_color: ExtraPropTypes.color
 };
 

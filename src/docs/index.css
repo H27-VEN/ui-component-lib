@@ -4,8 +4,7 @@ body {
   color: #666666;
 }
 
-a,
-a:visited {
+a, a:visited {
   color: #666666;
 }
 
@@ -17,14 +16,12 @@ td {
   border-top: solid 1px #d3d3d3;
 }
 
-td,
-th {
+td, th {
   padding: 10px;
 }
 
 table {
-  border-collapse: collapse;
-  width: 90%;
+  border-collapse:collapse;
 }
 
 /* Documentation site component styles */
@@ -36,22 +33,20 @@ table {
 }
 
 .example h4:first-of-type {
-  margin-top: 0;
+   margin-top: 0;
 }
 
 .example p:last-of-type {
-  margin-bottom: 0;
+   margin-bottom: 0;
 }
 
 .props tr td:last-of-type {
   text-align: center;
 }
 
-.props th,
-td {
+.props th, td {
   text-align: left;
   padding: 5px;
-  margin: 5px;
 }
 
 .navigation {

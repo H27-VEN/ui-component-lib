@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 import linkedin from "./profile-icons/icons-linkedin.png";
 import facebook from "./profile-icons/icons-facebook.png";
 import instagram from "./profile-icons/icons-instagram.png";
+import "bootstrap-css-only";
 import "./SPUserIcon.css";
 
 /* proptypes to create component */
 
+/** SPUserIcon is a user avatar component  */
 export default class SPUserIcon extends Component {
   getUserAvatar() {
     let icons = { linkedin, facebook, instagram };
@@ -60,9 +62,12 @@ export default class SPUserIcon extends Component {
   }
 }
 
-SPUserIcon.PropTypes = {
+SPUserIcon.propTypes = {
+  /** Name of the user (to be used in absence of image to create first letter avatar) */
   user_name: PropTypes.string.isRequired,
+  /** Image src a hyperlink to an image  */
   user_img_src: PropTypes.string,
+  /** Type of profile can any one of */
   profile_type: PropTypes.oneOf(
     "facebook",
     "linkedin",
